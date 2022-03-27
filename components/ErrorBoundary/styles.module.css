@@ -1,0 +1,24 @@
+.container {
+  @apply flex flex-col flex-wrap justify-center items-center;
+  @apply mx-auto mt-[5%] max-w-screen-2xl;
+  @apply gap-4;
+}
+
+.item {
+  @apply self-center text-center w-full;
+}
+
+.item > * {
+  @apply p-2;
+}
+
+.text {
+  @apply text-gray-500 font-terminal;
+}
+
+.reloadBtn {
+  @apply p-4 m-auto font-terminal shadow-lg rounded-full;
+  @apply text-sky-700 ring-blue-500 bg-white;
+  @apply hover:bg-sky-700 hover:text-white hover:ring-4;
+  @apply transition-all duration-300 ease-in-out;
+}
