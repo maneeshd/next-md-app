@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import { useAppSelector, useAppDispatch } from '../hooks'
-import { counterActions } from '../store'
+import { useAppSelector, useAppDispatch } from '../src/hooks'
+import { counterActions } from '../src/store'
 
 const Counter: NextPage = () => {
   const count = useAppSelector((state) => state.counter.value)
@@ -12,7 +12,9 @@ const Counter: NextPage = () => {
   }
 
   const decrement = () => {
-    count < 1 ? dispatch(counterActions.reset()) : dispatch(counterActions.decrement())
+    count < 1
+      ? dispatch(counterActions.reset())
+      : dispatch(counterActions.decrement())
   }
 
   const reset = () => dispatch(counterActions.reset())
@@ -21,7 +23,10 @@ const Counter: NextPage = () => {
     <>
       <Head>
         <title>MD-APP :: Counter</title>
-        <meta name="description" content="A simple counter app with Next.js and Redux" />
+        <meta
+          name="description"
+          content="A simple counter app with Next.js and Redux"
+        />
       </Head>
 
       <div className="min-h-screen flex flex-col items-center justify-start space-y-8">
@@ -32,7 +37,8 @@ const Counter: NextPage = () => {
 
         <div className="w-1/6 mx-auto shadow-xl rounded-2xl bg-white flex flex-col space-y-4 justify-center p-4 align-middle">
           <div className="text-4xl align-middle text-center">
-            <span className="font-light">Count:</span>&nbsp;<span className="font-mono">{count}</span>
+            <span className="font-light">Count:</span>&nbsp;
+            <span className="font-mono">{count}</span>
           </div>
 
           <div className="flex justify-between space-x-8 items-center">

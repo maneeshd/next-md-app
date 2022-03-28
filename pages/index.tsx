@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from '../styles/Home.module.css'
-import LINKS from '../data/links'
+import LINKS from '../src/data/links'
 
 const Home: NextPage = () => {
   return (
@@ -21,28 +21,51 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.tsx</code>
+          Get started by editing{' '}
+          <code className={styles.code}>pages/index.tsx</code>
         </p>
 
         <div className={styles.grid}>
-          <a href={LINKS.NEXTJS_DOCS_LINK} className={styles.card}>
+          <a
+            href={LINKS.NEXTJS_DOCS_LINK}
+            className={styles.card}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
-          <a href={LINKS.NEXTJS_LEARN_LINK} className={styles.card}>
+          <a
+            href={LINKS.NEXTJS_LEARN_LINK}
+            className={styles.card}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
-          <a href={LINKS.NEXTJS_EXAMPLES_LINK} className={styles.card}>
+          <a
+            href={LINKS.NEXTJS_EXAMPLES_LINK}
+            className={styles.card}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <h2>Examples &rarr;</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
-          <a href={LINKS.NEXTJS_DEPLOY_LINK} className={styles.card}>
+          <a
+            href={LINKS.NEXTJS_DEPLOY_LINK}
+            className={styles.card}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <h2>Deploy &rarr;</h2>
-            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
+            <p>
+              Instantly deploy your Next.js site to a public URL with Vercel.
+            </p>
           </a>
 
           <Link href="/test">
@@ -75,11 +98,18 @@ const Home: NextPage = () => {
         </div>
 
         <section className="max-w-screen-2xl p-4 mx-auto text-center">
-          <a className="text-2xl" href={LINKS.TAILWINDCSS_DOCS_LINK} target="_blank" rel="noopener noreferrer">
+          <a
+            className="text-2xl"
+            href={LINKS.TAILWINDCSS_DOCS_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             TailwindCss is working! 🎉 🎉 🎉
           </a>
           <p className="my-4">
-            <code>className=&quot;max-w-screen-2xl p-4 mx-auto text-center&quot;</code>
+            <code>
+              className=&quot;max-w-screen-2xl p-4 mx-auto text-center&quot;
+            </code>
           </p>
         </section>
       </main>

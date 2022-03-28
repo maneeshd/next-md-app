@@ -1,7 +1,7 @@
 // Testing Error Boundary Component
 import Head from 'next/head'
 import useSwr from 'swr'
-import { usersFetcher } from '../utils'
+import { usersFetcher } from '../src/utils'
 
 const Test: NextPage = () => {
   const { data, error } = useSwr('/api/users', usersFetcher)
@@ -14,7 +14,10 @@ const Test: NextPage = () => {
     <>
       <Head>
         <title>Test Page</title>
-        <meta name="description" content="A test page to check react error boundary" />
+        <meta
+          name="description"
+          content="A test page to check react error boundary"
+        />
       </Head>
 
       <h1>Test Page</h1>

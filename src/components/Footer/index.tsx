@@ -1,4 +1,4 @@
-import './styles.module.css';
+import './styles.module.css'
 
 const Footer: FC = () => {
   return <></>

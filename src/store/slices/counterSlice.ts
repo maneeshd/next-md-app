@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { AppDispatch } from '../'
+import type { AppDispatch } from '..'
 
 // Define a type for the slice state
 type CounterState = {

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { AppDispatch } from '../'
+import type { AppDispatch } from '..'
 
 type Post = {
   id: number
@@ -26,7 +26,9 @@ const postsSlice = createSlice({
       state.posts = state.posts.filter((post) => post.id !== action.payload)
     },
     updatePost: (state, action: PayloadAction<Post>) => {
-      const index = state.posts.findIndex((post) => post.id === action.payload.id)
+      const index = state.posts.findIndex(
+        (post) => post.id === action.payload.id,
+      )
       state.posts[index] = action.payload
     },
   },

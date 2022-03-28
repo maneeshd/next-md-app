@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import { useAppSelector, useAppDispatch } from '../hooks'
-import { postsActions } from '../store'
+import { useAppSelector, useAppDispatch } from '../src/hooks'
+import { postsActions } from '../src/store'
 
 const Counter: NextPage = () => {
   const posts = useAppSelector((state) => state.posts.posts)
@@ -11,7 +11,10 @@ const Counter: NextPage = () => {
     <>
       <Head>
         <title>MD-APP :: Posts</title>
-        <meta name="description" content="A simple posts app with Next.js and Redux" />
+        <meta
+          name="description"
+          content="A simple posts app with Next.js and Redux"
+        />
       </Head>
 
       <div className="min-h-screen flex flex-col items-center justify-start space-y-8">

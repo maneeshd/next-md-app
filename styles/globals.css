@@ -13,9 +13,9 @@
   }
 
   a {
-    @apply text-blue-500;
-    @apply hover:underline hover:text-indigo-500;
-    @apply active:text-indigo-500;
+    @apply !text-blue-500;
+    @apply hover:!underline hover:!text-indigo-500;
+    @apply active:!text-indigo-500;
   }
 
   code {

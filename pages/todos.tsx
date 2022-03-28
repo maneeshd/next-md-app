@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
-import { useAppSelector, useAppDispatch } from '../hooks'
-import { todoListActions } from '../store'
+import { useAppSelector, useAppDispatch } from '../src/hooks'
+import { todoListActions } from '../src/store'
 
 const Counter: NextPage = () => {
   const todos = useAppSelector((state) => state.todoList.todos)
@@ -11,7 +11,10 @@ const Counter: NextPage = () => {
     <>
       <Head>
         <title>MD-APP :: ToDo List</title>
-        <meta name="description" content="A simple todo list app with Next.js and Redux" />
+        <meta
+          name="description"
+          content="A simple todo list app with Next.js and Redux"
+        />
       </Head>
 
       <div className="min-h-screen flex flex-col items-center justify-start space-y-8">

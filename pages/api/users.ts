@@ -10,7 +10,10 @@ type Error = {
   message: string
 }
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<Data | Error>) {
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data | Error>,
+) {
   if (req.method === 'GET') {
     res.status(200).json([{ name: 'John Doe' }])
   } else {
